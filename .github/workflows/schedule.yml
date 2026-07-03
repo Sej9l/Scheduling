@@ -1,0 +1,15 @@
+name: Run PowerShell Script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run PowerShell Script
+        shell: pwsh
+        run: ./scripts/MyScript.ps1
